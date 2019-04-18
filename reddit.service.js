@@ -1,4 +1,4 @@
-function RedditService($http) {
+function RedditService(http) {
     const service = this;
 
      /**
@@ -8,7 +8,9 @@ function RedditService($http) {
     service.fetchAwwSubreddit = ()=> {
         //$http stuff goes here
 
-        RedditService.fetchAwwSubreddit();
+        // RedditService.fetchAwwSubreddit();
+        return http.get('https://www.reddit.com/r/aww/.json?limit=9');
+
      };
    
 
