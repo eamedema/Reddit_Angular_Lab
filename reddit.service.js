@@ -9,7 +9,7 @@ function RedditService(http) {
         //$http stuff goes here
 
         // RedditService.fetchAwwSubreddit();
-        return http.get('https://www.reddit.com/r/aww/.json?limit=9');
+        return http.get('https://www.reddit.com/r/aww/.json?limit=10');
 
      };
    
