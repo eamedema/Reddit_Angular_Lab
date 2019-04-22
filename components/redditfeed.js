@@ -17,7 +17,7 @@ function RedditFeed(RedditService, $q) {
                     let childObj = {
                         title: child.data.title,
                         img: child.data.thumbnail,
-                        permalink: child.data.permalink
+                        url: child.data.url
                     }
 
                     ctrl.feed.push(childObj);
@@ -47,10 +47,10 @@ function RedditFeed(RedditService, $q) {
   .module('RedditApp')
   .component('redditFeed', {
     template: `
-        <div ng-repeat="post in $ctrl.feed">
-            <h2>{{post.title}}</h2>
+        <div class="post" ng-repeat="post in $ctrl.feed">
+            <h2 class="titles">{{post.title}}</h2>
             <img src="{{post.img}}"></img>
-            <a href="{{post.permalink}}">LINK</a>
+            <a class="links" href="{{post.url}}" target="_blank">LINK</a>
         </div>
     `, // or use templateUrl
     controller: RedditFeed,
